@@ -4,14 +4,12 @@ Fonctionnalité 1 :
   Cette fonctionnalité doit être codée avec un addEventListener("click", function(){ } car c'est une bonne habitude à prendre ! 😇
 */
 
-/*
 f1 = document.querySelector("footer");
 f1.addEventListener("click", clique);
 
 function clique(){
   console.log("clique")
 }
-*/
 
 /*
 Fonctionnalité 1-bis :
@@ -22,20 +20,28 @@ Fonctionnalité 1-bis :
 f1bis = document.querySelector("footer");
 f1bis.addEventListener("click", someClicks);
 
-let x = 1
+let x = 1;
 function someClicks(){
-  console.log("clic numéro "+ x)
-  return x++
+  console.log("clic numéro "+ x);
+  return x++;
 }
 
 /*
 Fonctionnalité 2 :
-  On va enfin faire fonctionner ce satané "Hamburger Menu" qui s'affiche depuis le début mais qui n'actionne rien quand on clique dessus. C'est quoi un "hamburger menu" ? C'est ça, ce bouton avec trois lignes horizontales en haut à droite de la navbar.
-  Tu vas faire que si quelqu'un clique sur ce bouton, l'élément HTML portant l'Id navbarHeader perde sa classe collapse. Une fois que ça, ça marche, fait que si on clique à nouveau dessus, la classe collapse soit rajoutée à nouveau à l'élément portant l'Id navbarHeader
-  Indice : Il existe une fonction qui permet de rajouter une classe si elle n'est pas déjà présente et l'enlever si elle est déjà présente. C'est "toggle". Tu peux l'utiliser ainsi : elementDuDOM.classList.toggle("nomDeLaClasse")
+  On va enfin faire fonctionner ce satané "Hamburger Menu" qui s'affiche depuis le début mais qui n'actionne rien quand on clique dessus.
+  C'est quoi un "hamburger menu" ? C'est ça, ce bouton avec trois lignes horizontales en haut à droite de la navbar.
+  Tu vas faire que si quelqu'un clique sur ce bouton, l'élément HTML portant l'Id navbarHeader perde sa classe collapse.
+  Une fois que ça, ça marche, fait que si on clique à nouveau dessus, la classe collapse soit rajoutée à nouveau à l'élément portant l'Id navbarHeader
+  Indice : Il existe une fonction qui permet de rajouter une classe si elle n'est pas déjà présente et l'enlever si elle est déjà présente.
+  C'est "toggle". Tu peux l'utiliser ainsi : elementDuDOM.classList.toggle("nomDeLaClasse")
 */
 
+hamburgerMenu = document.getElementById("navbarHeader");
+hamburgerMenu.addEventListener("click", hamburgerMenuToggle);
 
+function hamburgerMenuToggle(){
+  hamburgerMenu.classList.toggle("collapse");
+}
 
 /*
 Fonctionnalité 3 :
